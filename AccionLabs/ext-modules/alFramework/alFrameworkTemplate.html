@@ -1,0 +1,37 @@
+﻿
+<div class="al-title-bar">
+    <div class="row">
+        <div class="al-logo-area col-sm-6">
+            <img class="al-icon" ng-src="{{ iconFile }}" />
+            <div class="al-title-area">
+                <p class="al-logo-title">{{ title }}</p>
+                <p class="al-logo-subtitle">{{ subtitle }}</p>
+            </div>
+
+            <div ng-if="isMenuButtonVisible" ng-click="menuButtonClicked()" 
+                 class="al-collapsed-menu pull-right">
+                <button type="button" class="btn al-nav-button">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="al-right-side-controls col-sm-6">
+            <div>
+                <button class="btn btn-primary">Button 1</button>
+                <button class="btn btn-success">Button 2</button>
+                <button class="btn btn-warning">Button 3</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<ng-transclude></ng-transclude>
+
+<div ng-view class="al-view"
+        ng-class="{'al-view-full-width': !isMenuVertical || !isMenuVisible}">
+</div>
+
+

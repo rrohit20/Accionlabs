@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>AccionLabs Dashboard</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/angular-gridster.min.css" rel="stylesheet" />
+    <link href="app/app.css" rel="stylesheet" />
+    <link href="ext-modules/alFramework/alFramework.css" rel="stylesheet" />
+    <link href="ext-modules/alMenu/alMenu.css" rel="stylesheet" />
+    <link href="ext-modules/alDashboard/alDashboard.css" rel="stylesheet" />
+
+    <!-- widget css -->
+    <link href="app/widgets/wwaTemperature/wwaTemperature.css" rel="stylesheet" />
+    <link href="app/widgets/wwaInventory/wwaInventory.css" rel="stylesheet" />
+    <link href="app/widgets/wwaEmployee/wwaEmployee.css" rel="stylesheet" />
+
+    <script src="Scripts/jquery-2.1.3.min.js"></script>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/angular-gridster.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="ext-modules/alMenu/alMenuModule.js"></script>
+    <script src="ext-modules/alMenu/alMenuController.js"></script>
+    <script src="ext-modules/alMenu/alMenuDirective.js"></script>
+    <script src="ext-modules/alMenu/alMenuItemDirective.js"></script>
+    <script src="ext-modules/alMenu/alMenuGroupDirective.js"></script>
+
+    <script src="ext-modules/alDashboard/alDashboardModule.js"></script>
+    <script src="ext-modules/alDashboard/alDashboardDirective.js"></script>
+    <script src="ext-modules/alDashboard/alWidgetBodyDirective.js"></script>
+
+    <script src="ext-modules/alFramework/alFrameworkModule.js"></script>
+    <script src="ext-modules/alFramework/alFrameworkController.js"></script>
+    <script src="ext-modules/alFramework/alFrameworkDirective.js"></script>
+
+    <script src="app/appModule.js"></script>
+    <script src="app/appConfig.js"></script>
+    <script src="app/appRouteConfig.js"></script>
+    <script src="app/services/dataService.js"></script>
+
+    <script src="app/directives/wwaDashboardDirective.js"></script>
+    <script src="app/directives/wwaGuidesDirective.js"></script>
+    <script src="app/directives/wwaLocationsDirective.js"></script>
+
+    <!-- widget JavaScript files -->
+    <script src="app/widgets/wwaTemperature/wwaTemperatureDirective.js"></script>
+    <script src="app/widgets/wwaInventory/wwaInventoryDirective.js"></script>
+    <script src="app/widgets/wwaEmployee/wwaEmployeeDirective.js"></script>
+
+    <!-- setting dialogs -->
+    <script src="app/dialogs/wwaSelectEmployeeController.js"></script>
+    <script src="app/dialogs/wwaSelectLocationController.js"></script>
+
+</head>
+<body class="container-fluid">
+
+    <al-framework title="AccionLabs"
+                  subtitle="Administrative Application"
+                  icon-file="images/accion-logo-2018.png">
+
+        <al-menu>
+            <al-menu-item label="Dashboard" icon="fa-dashboard" route="dashboard"></al-menu-item>
+            <al-menu-item label="Files" icon="fa-location-arrow" route="locations"></al-menu-item>
+            <al-menu-item label="Employee Hub" icon="fa-user" route="guides"></al-menu-item>
+            <al-menu-group label="Leave Tracker" icon="fa-gears">
+                <al-menu-item label="Views" icon="fa-unlink" route="rafts"></al-menu-item>
+                <al-menu-item label="Reports" icon="fa-magic" route="paddles"></al-menu-item>
+                <al-menu-item label="Holidays" icon="fa-life-ring" route="vests"></al-menu-item>
+            </al-menu-group>
+        </al-menu>
+
+
+    </al-framework>
+
+</body>
+</html>

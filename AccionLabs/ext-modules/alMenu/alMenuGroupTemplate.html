@@ -1,0 +1,13 @@
+﻿
+<li class="al-selectable-item" ng-click="clicked()" ng-class="{'al-item-horizontal': !isVertical()}">
+    <div class="al-noselect">
+        <i class="fa {{icon}} al-menu-icon"></i>
+        {{label}}
+        <i ng-if="isVertical()"
+           class="fa fa-chevron-left al-group-indicator-left"
+           ng-class="{'fa-rotate-270': isOpen}"></i>
+    </div>
+</li>
+<div ng-show="isOpen" class="al-subitem-section ps-fade-in-animation" ng-class="{'al-popup-menu': !isVertical() }">
+    <ul ng-transclude></ul>
+</div>
